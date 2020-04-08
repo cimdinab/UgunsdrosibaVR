@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class TextButton : MonoBehaviour
 {
@@ -18,10 +19,14 @@ public class TextButton : MonoBehaviour
 
     private float _mFuseTime;
 
+    //public GameObject daba;
+
+   // private TextMeshProUGUI tmpObj;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,12 +39,11 @@ public class TextButton : MonoBehaviour
             {
                 _mSuccessful = true; //We're good
                 _mFusing = false;
-
                 mSuccessfulEvent.Invoke();
             }
             else //Not enough time has passed
             {
-                gameObject.GetComponent<Text>().color = new Color(lElapsedTime / mFuseDuration, lElapsedTime / mFuseDuration, lElapsedTime / mFuseDuration);
+                gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 0, 255);
                 //This results in a value between 0 and 1
             }
         }
@@ -47,6 +51,7 @@ public class TextButton : MonoBehaviour
 
     public void OnPointerEnter()
     {
+        //gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 255, 255);
         _mFusing = true;
         _mFuseTime = Time.time;
     }
@@ -55,7 +60,7 @@ public class TextButton : MonoBehaviour
     {
         if (!_mSuccessful) //not successful
             mFailureEvent.Invoke();
-
+        gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 255, 255);
         _mFusing = false;
         _mSuccessful = false;
     }
