@@ -19,46 +19,41 @@ public class TextButton : MonoBehaviour
 
     private float _mFuseTime;
 
-    //public GameObject daba;
-
-   // private TextMeshProUGUI tmpObj;
-
-    // Start is called before the first frame update
+    // Start tiek izsaukts pirms pirmā kadra atjaunošanas
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+    // Update tiek izsaukts vienu reizi katrā kadrā
     void Update()
     {
         if (_mFusing)
         {
-            float lElapsedTime = Time.time - _mFuseTime; //current time - start time
-            if (lElapsedTime >= mFuseDuration) //if enough time has passed...
+            float lElapsedTime = Time.time - _mFuseTime; //pašreizējais laiks - starta laiks
+            if (lElapsedTime >= mFuseDuration) //ja pietiekami ilgs laiks ir pagājis...
             {
-                _mSuccessful = true; //We're good
+                _mSuccessful = true; //ir successful
                 _mFusing = false;
                 mSuccessfulEvent.Invoke();
             }
-            else //Not enough time has passed
+            else //vēl nav pagājis pietiekami ilgs laiks
             {
                 gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 0, 255);
-                //This results in a value between 0 and 1
+                //objekta krāsa ir dzeltena
             }
         }
     }
 
     public void OnPointerEnter()
     {
-        //gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 255, 255);
         _mFusing = true;
         _mFuseTime = Time.time;
     }
 
     public void OnPointerExit()
     {
-        if (!_mSuccessful) //not successful
+        if (!_mSuccessful) //nav successful
             mFailureEvent.Invoke();
         gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 255, 255);
         _mFusing = false;

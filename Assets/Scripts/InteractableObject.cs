@@ -1,11 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableObject : MonoBehaviour
 {
-    private bool _mMoving = false; //Controls whether or not this object is moving
+    
     private Camera _mCamera; //The main camera
+    public float mFuseDuration = 3.0f;
+    [Tooltip("The event to be called if the fuse was successful")]
+    public UnityEvent mSuccessfulEvent;
+
+    [Tooltip("The event to be called if the fuse failed")]
+    public UnityEvent mFailureEvent;
+
+    private bool _mFusing = false;
+    private bool _mSuccessful = false;
+
+    private float _mFuseTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,30 +27,38 @@ public class InteractableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_mMoving)
+        if (_mFusing)
         {
+            float lElapsedTime = Time.time - _mFuseTime;
             RaycastHit lHit; //this stores the result of the raycast
             Physics.Raycast(_mCamera.transform.position, _mCamera.transform.forward, out lHit); //perform a raycast into the scene from the cameras' PoV
-            if (lHit.collider != null) //if we hit something
+            if (lElapsedTime >= mFuseDuration) //ja pietiekami ilgs laiks ir pagājis...
             {
-                gameObject.transform.position = lHit.point; //move us there
+                _mSuccessful = true; //ir successful
+                _mFusing = false;
+                mSuccessfulEvent.Invoke();
             }
-            else
+            else //vēl nav pagājis pietiekami ilgs laiks
             {
-                gameObject.transform.position = _mCamera.transform.position + _mCamera.transform.forward * 2.0f; //just move us in front of the camera
+                //gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 0, 255);
+                //objekta krāsa ir dzeltena
             }
         }
     }
 
-    public void OnPointerDown() //when the button is pressed down
+    public void OnPointerEnter() //when the button is pressed down
     {
-        _mMoving = true;
-        gameObject.GetComponent<Collider>().enabled = false;
+        _mFusing = true;
+        _mFuseTime = Time.time;
+        //gameObject.GetComponent<Collider>().enabled = false;
     }
 
-    public void OnPointerUp() //when the button is released
+    public void OnPointerExit() //when the button is released
     {
-        _mMoving = false;
-        gameObject.GetComponent<Collider>().enabled = true;
+        if (!_mSuccessful) //nav successful
+            mFailureEvent.Invoke();
+        //gameObject.GetComponent<Collider>().enabled = true;
+        _mFusing = false;
+        _mSuccessful = false;
     }
 }
