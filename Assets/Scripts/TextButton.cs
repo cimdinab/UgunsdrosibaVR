@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
-using TMPro;
 
 public class TextButton : MonoBehaviour
 {
@@ -30,16 +27,20 @@ public class TextButton : MonoBehaviour
     {
         if (_mFusing)
         {
-            float lElapsedTime = Time.time - _mFuseTime; //pašreizējais laiks - starta laiks
-            if (lElapsedTime >= mFuseDuration) //ja pietiekami ilgs laiks ir pagājis...
+            //pašreizējais laiks - starta laiks
+            float lElapsedTime = Time.time - _mFuseTime;
+            //ja pietiekami ilgs laiks ir pagājis...
+            if (lElapsedTime >= mFuseDuration)
             {
                 _mSuccessful = true; //ir successful
                 _mFusing = false;
                 mSuccessfulEvent.Invoke();
             }
-            else //vēl nav pagājis pietiekami ilgs laiks
+            //vēl nav pagājis pietiekami ilgs laiks
+            else
             {
-                gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 0, 255);
+                gameObject.GetComponent<TextMeshProUGUI>().color =
+                    new Color32(255, 255, 0, 255);
                 //objekta krāsa ir dzeltena
             }
         }
@@ -55,7 +56,8 @@ public class TextButton : MonoBehaviour
     {
         if (!_mSuccessful) //nav successful
             mFailureEvent.Invoke();
-        gameObject.GetComponent<TextMeshProUGUI>().color = new Color32(255, 255, 255, 255);
+        gameObject.GetComponent<TextMeshProUGUI>().color =
+            new Color32(255, 255, 255, 255);
         _mFusing = false;
         _mSuccessful = false;
     }
