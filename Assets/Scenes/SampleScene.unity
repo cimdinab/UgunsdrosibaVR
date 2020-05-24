@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.14
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: e6886bf75b04f467aa3b36b9b3efa869, type: 2}
@@ -15652,12 +15652,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 249387904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &249387907
@@ -16094,11 +16094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010211449530, guid: 3e8bbc11ff0ac7f4eb91aa277bc85c30, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010211449530, guid: 3e8bbc11ff0ac7f4eb91aa277bc85c30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.663
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4000010211449530, guid: 3e8bbc11ff0ac7f4eb91aa277bc85c30, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16228,12 +16228,17 @@ PrefabInstance:
     - target: {fileID: 198000010553418874, guid: 3e8bbc11ff0ac7f4eb91aa277bc85c30,
         type: 3}
       propertyPath: lengthInSec
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198000010553418874, guid: 3e8bbc11ff0ac7f4eb91aa277bc85c30,
         type: 3}
       propertyPath: InitialModule.rotation3D
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000010553418874, guid: 3e8bbc11ff0ac7f4eb91aa277bc85c30,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8bbc11ff0ac7f4eb91aa277bc85c30, type: 3}
@@ -17880,12 +17885,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 334052917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &334052920
@@ -23056,6 +23061,7 @@ Transform:
   - {fileID: 1330911765}
   - {fileID: 891659721}
   - {fileID: 334052918}
+  - {fileID: 890598543}
   m_Father: {fileID: 1812267806}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23499,7 +23505,7 @@ PrefabInstance:
     - target: {fileID: 1493958779012619316, guid: b9de24523a11d714db3851b5f0f9d527,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1566706
+      value: -6.699
       objectReference: {fileID: 0}
     - target: {fileID: 1493958779012619316, guid: b9de24523a11d714db3851b5f0f9d527,
         type: 3}
@@ -23509,7 +23515,7 @@ PrefabInstance:
     - target: {fileID: 1493958779012619316, guid: b9de24523a11d714db3851b5f0f9d527,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.784393
+      value: -12.919
       objectReference: {fileID: 0}
     - target: {fileID: 1493958779012619316, guid: b9de24523a11d714db3851b5f0f9d527,
         type: 3}
@@ -37150,12 +37156,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 565878059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &565878062
@@ -43562,12 +43568,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 646888172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &646888175
@@ -48965,12 +48971,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 684224008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &684224011
@@ -66972,6 +66978,69 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1001 &890598542
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 356446723}
+    m_Modifications:
+    - target: {fileID: 1219242409985248, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_Name
+      value: Bucket_1_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.821
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.3456054
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8055551
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5925209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -252.672
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20a2edbb5aaf6bf4a932566240f09151, type: 3}
+--- !u!4 &890598543 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4153951137213078, guid: 20a2edbb5aaf6bf4a932566240f09151,
+    type: 3}
+  m_PrefabInstance: {fileID: 890598542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &891659720
 GameObject:
   m_ObjectHideFlags: 0
@@ -67022,12 +67091,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 891659720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &891659723
@@ -81059,12 +81128,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097337215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1097337218
@@ -92985,12 +93054,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208224162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1208224165
@@ -107105,12 +107174,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429402376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1429402379
@@ -107424,12 +107493,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1442094267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1442094270
@@ -107599,12 +107668,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1447365115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1447365118
@@ -126303,12 +126372,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1710119733}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1710119736
@@ -127708,12 +127777,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750185571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
+  ignoreReversedGraphics: 1
+  blockingObjects: 2
+  blockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
 --- !u!114 &1750185574
