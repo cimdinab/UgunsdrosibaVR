@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class InteractableObject : MonoBehaviour
 {
 
-    private Camera _mCamera; //The main camera
+    private Camera _mCamera; //Main camera
     public float mFuseDuration = 3.0f;
     [Tooltip("The event to be called if the fuse was successful")]
     public UnityEvent mSuccessfulEvent;
@@ -16,22 +16,21 @@ public class InteractableObject : MonoBehaviour
     private bool _mSuccessful = false;
 
     private float _mFuseTime;
-    // Start is called before the first frame update
+    // Start tiek izsaukts pirms pirmā kadra
     void Start()
     {
         _mCamera = Camera.main;
     }
 
-    // Update is called once per frame
+    // Update tiek izsaukts katru kadru
     void Update()
     {
         if (_mFusing)
         {
             float lElapsedTime = Time.time - _mFuseTime;
-            RaycastHit lHit; //this stores the result of the raycast
+            RaycastHit lHit; //raycast rezultāts
             Physics.Raycast(_mCamera.transform.position,
                 _mCamera.transform.forward, out lHit); 
-            //perform a raycast into the scene from the cameras' PoV
             if (lElapsedTime >= mFuseDuration) 
                 //ja pietiekami ilgs laiks ir pagājis...
             {
@@ -47,14 +46,12 @@ public class InteractableObject : MonoBehaviour
     }
 
     public void OnPointerEnter() 
-        //when the button is pressed down
     {
         _mFusing = true;
         _mFuseTime = Time.time;
     }
 
     public void OnPointerExit()
-        //when the button is released
     {
         if (!_mSuccessful) //nav successful
             mFailureEvent.Invoke();

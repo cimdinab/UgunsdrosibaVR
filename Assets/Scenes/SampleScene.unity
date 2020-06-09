@@ -7169,6 +7169,18 @@ MonoBehaviour:
           m_StringArgument: "Paskaties \u0161eit, lai p\u0101rbaud\u012Btu izv\u0113li!"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1126006411}
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "Vispirsms paskaties \u0161eit un p\u0113c tam izv\u0113lies
+            ugunskura vietu!"
+          m_BoolArgument: 0
+        m_CallState: 2
   mFailureEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -24030,6 +24042,18 @@ MonoBehaviour:
           m_StringArgument: "Paskaties \u0161eit, lai p\u0101rbaud\u012Btu izv\u0113li!"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1126006411}
+        m_MethodName: set_text
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "Vispirsms paskaties \u0161eit un p\u0113c tam izv\u0113lies
+            ugunskura vietu!"
+          m_BoolArgument: 0
+        m_CallState: 2
   mFailureEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -36439,7 +36463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &537539125
 RectTransform:
   m_ObjectHideFlags: 0
@@ -93998,7 +94022,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1256534759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -94167,7 +94191,8 @@ MonoBehaviour:
   m_text: "Uz s\u0101kumu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24c27360b08aaf844a1a3ad75b167dd4, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: 626998727229649240, guid: 24c27360b08aaf844a1a3ad75b167dd4,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -119165,7 +119190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1562069059
 RectTransform:
   m_ObjectHideFlags: 0
@@ -126704,7 +126729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1720667392
 RectTransform:
   m_ObjectHideFlags: 0
@@ -126750,7 +126775,8 @@ MonoBehaviour:
     Cimdi\u0146a, RTU DITF VDI"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 24c27360b08aaf844a1a3ad75b167dd4, type: 2}
-  m_sharedMaterial: {fileID: 0}
+  m_sharedMaterial: {fileID: 626998727229649240, guid: 24c27360b08aaf844a1a3ad75b167dd4,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -129000,7 +129026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1793089057
 RectTransform:
   m_ObjectHideFlags: 0
